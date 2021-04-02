@@ -1,0 +1,1 @@
+export const CHANGE_CURRENT_SONG = "playre/CHANGE_CURRENT_SONG";
