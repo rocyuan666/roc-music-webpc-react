@@ -15,7 +15,9 @@ export function getCurrentSongData(ids) {
 		request({
 			url: api.songDetail + "?ids="+ids
 		}).then(res => {
-			dispatch(changeCurrentSong(res.songs[0]))
+			if((res.songs instanceof Array) && (res.songs.length)){
+				dispatch(changeCurrentSong(res.songs[0]))
+			}
 		})
 	}
 }
